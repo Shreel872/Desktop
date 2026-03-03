@@ -10,7 +10,7 @@ import EngineeringPanel from "../components/panel/EngineeringPanel";
 const VIEWS = [
   { id: "3d", label: "3D Model" },
   { id: "top", label: "Top Layer" },
-  { id: "bottom", label: "Bottom Layer" },
+  { id: "layout", label: "Layout" },
   { id: "photo", label: "Photo" },
 ];
 
@@ -67,10 +67,10 @@ function ViewerArea({ mod, activeView }) {
         />
       )}
 
-      {activeView === "bottom" && (
-        <GerberViewer
-          gerberFiles={mod.gerberFiles}
-          side="bottom"
+      {activeView === "layout" && (
+        <PhotoViewer
+          photoPath={mod.layoutPath}
+          moduleName={`${mod.name} — Altium Layout`}
           className="w-full h-full"
         />
       )}

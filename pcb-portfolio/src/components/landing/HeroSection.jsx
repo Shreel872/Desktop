@@ -52,9 +52,7 @@ export default function HeroSection() {
         animate="visible"
         className="text-sm text-gray-500 leading-relaxed max-w-2xl mb-8"
       >
-        Final-year Mechatronics Engineering student at QUT. Experience designing
-        automotive lighting PCBs, ACU power distribution systems, and embedded
-        control hardware for solar vehicle applications.
+Final-year Mechatronics Engineering student at QUT specialising in automotive electronics, with experience in LED PCB design, power budgeting, and embedded control hardware for solar vehicle systems.
       </motion.p>
 
       <motion.div

@@ -6,13 +6,14 @@
   --color-accent-subtle: #2563eb;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body, #root {
+  height: 100dvh;
+  overflow: hidden;
+  margin: 0;
 }
 
 body {
   font-family: var(--font-sans);
-  margin: 0;
 }
 
 /* KaTeX overrides for dark backgrounds */

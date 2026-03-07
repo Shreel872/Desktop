@@ -117,15 +117,23 @@ export const modules = [
     shortName: "Rear Stop",
     tabOrder: 1,
 
-    modelPath: null,
-    gerberFiles: [],
-    layoutPath: null,
+    modelPath: "/models/rs.glb",
+        gerberFiles: [
+      "/gerbers/rear-stop/Rear Stop LED PCB.GTL",
+      "/gerbers/rear-stop/Rear Stop LED PCB.GBL",
+      "/gerbers/rear-stop/Rear Stop LED PCB.GTO",
+      "/gerbers/rear-stop/Rear Stop LED PCB.GBO",
+      "/gerbers/rear-stop/Rear Stop LED PCB.GTS",
+      "/gerbers/rear-stop/Rear Stop LED PCB.GBS",
+      "/gerbers/rear-stop/Rear Stop LED PCB.GM1",
+    ],
+    layoutPath: "/images/rear stop.png",
     schematicPath: null,
     photoPath: null,
 
     comparison: {
       dutyCycle: "Intermittent",
-      current: "2 × 140 mA",
+      current: "280 mA",
       thermalPriority: "Medium",
     },
 
@@ -213,7 +221,7 @@ export const modules = [
       "/gerbers/front-ind/PCB_FRONT_DIR_LIGHT.GBS",
       "/gerbers/front-ind/PCB_FRONT_DIR_LIGHT.GM1",
     ],
-    layoutPath: null,
+    layoutPath: "/images/frontind.png",
     schematicPath: null,
     photoPath: null,
 
@@ -304,7 +312,7 @@ export const modules = [
       "/gerbers/side-ind/SIDE_DIR_IND_PCB.GBS",
       "/gerbers/side-ind/SIDE_DIR_IND_PCB.GM1",
     ],
-    layoutPath: null,
+    layoutPath: "/images/sideind.png",
     schematicPath: null,
     photoPath: null,
 
@@ -392,7 +400,7 @@ export const modules = [
       "/gerbers/DRL/DRL_PCB.GTS",
       "/gerbers/DRL/DRL_PCB.GBS",
       "/gerbers/DRL/DRL_PCB.GM1",],
-    layoutPath: null,
+    layoutPath: "/images/drl.png",
     schematicPath: null,
     photoPath: null,
 

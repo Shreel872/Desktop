@@ -5,9 +5,9 @@ import ShowcasePage from "./pages/ShowcasePage";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
+    <div className="h-dvh bg-gray-950 text-gray-100 flex flex-col overflow-hidden">
       <Header />
-      <main className="flex-1 flex flex-col">
+      <main className="flex-1 flex flex-col min-h-0 overflow-hidden">
         <Routes>
           <Route path="/" element={<ProjectsPage />} />
           <Route path="/projects/:projectId" element={<ShowcasePage />} />

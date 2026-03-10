@@ -4,6 +4,7 @@ import { getProjectById } from "../data/projects";
 import ModelViewer from "../components/viewer/ModelViewer";
 import GerberViewer from "../components/viewer/GerberViewer";
 import PhotoViewer from "../components/viewer/PhotoViewer";
+import PdfViewer from "../components/viewer/PdfViewer";
 import ViewToggle from "../components/ui/ViewToggle";
 import EngineeringPanel from "../components/panel/EngineeringPanel";
 
@@ -77,9 +78,10 @@ function ViewerArea({ mod, activeView }) {
       )}
 
       {activeView === "schematic" && (
-        <PhotoViewer
-          photoPath={mod.schematicPath}
-          moduleName={`${mod.name} — Schematic`}
+        <PdfViewer
+          pdfPath={mod.schematicPath}
+          page={1}
+          title={`${mod.name} — Schematic`}
           className="w-full h-full"
         />
       )}
@@ -138,9 +140,9 @@ export default function ShowcasePage() {
   const activeMod = modules.find((m) => m.id === activeModuleId) || modules[0];
 
   return (
-    <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-hidden">
+    <div className="flex flex-col lg:flex-row flex-1 min-h-0 overflow-y-auto lg:overflow-hidden">
       {/* Left panel — viewer */}
-      <div className="flex flex-col h-[50vh] lg:h-auto lg:flex-1 lg:min-h-0 lg:w-[65%] w-full border-b lg:border-b-0 lg:border-r border-gray-800/50 overflow-hidden">
+      <div className="flex flex-col flex-none h-[200px] lg:h-auto lg:flex-1 lg:min-h-0 lg:w-[65%] w-full border-b lg:border-b-0 lg:border-r border-gray-800/50 overflow-hidden">
         <div className="flex-none flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-5 py-3 border-b border-gray-800/50">
           <ModuleTabs
             modules={modules}
@@ -160,7 +162,7 @@ export default function ShowcasePage() {
       </div>
 
       {/* Right panel — engineering specs (only this scrolls) */}
-      <div className="lg:w-[35%] w-full flex-1 lg:flex-none min-h-0 overflow-y-auto overflow-x-hidden bg-gray-950">
+      <div className="lg:w-[35%] w-full lg:flex-1 lg:flex-none lg:min-h-0 lg:overflow-hidden bg-gray-950">
         <EngineeringPanel
           module={activeMod}
           allModules={modules}

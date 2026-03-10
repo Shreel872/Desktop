@@ -11,8 +11,8 @@ export default function EngineeringPanel({
   onModuleSelect,
 }) {
   return (
-    <div className="h-full flex flex-col">
-      <div className="sticky top-0 z-10 bg-gray-950 border-b border-gray-800/60 p-4 pb-3">
+    <div className="lg:h-full flex flex-col">
+      <div className="lg:sticky lg:top-0 z-10 bg-gray-950 border-b border-gray-800/60 p-4 pb-3">
         <ComparisonTable
           modules={allModules}
           activeModuleId={activeModuleId}
@@ -20,7 +20,7 @@ export default function EngineeringPanel({
         />
       </div>
 
-      <div className="flex-1 overflow-y-auto p-5 pt-4">
+      <div className="lg:flex-1 lg:overflow-y-auto p-5 pt-4">
         <AnimatePresence mode="wait">
           <motion.div
             key={mod.id}

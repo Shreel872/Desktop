@@ -31,7 +31,7 @@ export const modules = [
       "/gerbers/central-brake/cbl.GM1",
     ],
     layoutPath: "/images/Central Brake Altium Image.png",
-    schematicPath: null,
+    schematicPath: "/schematics/CBL.pdf",
     photoPath: null,
 
     comparison: {
@@ -128,7 +128,7 @@ export const modules = [
       "/gerbers/rear-stop/Rear Stop LED PCB.GM1",
     ],
     layoutPath: "/images/rear stop.png",
-    schematicPath: null,
+    schematicPath: "/schematics/RSL.pdf",
     photoPath: null,
 
     comparison: {
@@ -180,6 +180,11 @@ export const modules = [
         latex:
           "P_{total} = 2 \\times V_{supply} \\times I_f = 2 \\times 13.8 \\times 0.14 = 3.864\\,\\text{W}",
       },
+      {
+        title: "Resistor Power (per resistor)",
+        latex:
+          "P_R = (V_{supply} - N_{branch} \\cdot V_f) \\times I_f = (13.8 - 5 \\times 2.25) \\times 0.14 = 2.55 \\times 0.14 = 0.357\\,\\text{W}",
+      },
     ],
 
     designConsiderations: [
@@ -222,7 +227,7 @@ export const modules = [
       "/gerbers/front-ind/PCB_FRONT_DIR_LIGHT.GM1",
     ],
     layoutPath: "/images/frontind.png",
-    schematicPath: null,
+    schematicPath: "/schematics/FRI.pdf",
     photoPath: null,
 
     comparison: {
@@ -269,6 +274,11 @@ export const modules = [
         latex:
           "P_{total} = 3 \\times V_{supply} \\times I_f = 3 \\times 13.8 \\times 0.35 = 14.49\\,\\text{W}",
       },
+      {
+        title: "Resistor Power (per resistor)",
+        latex:
+          "P_R = (V_{supply} - 5 \\times V_f) \\times I_f = (13.8 - 5 \\times 2.2) \\times 0.35 = 2.8 \\times 0.35 = 0.98\\,\\text{W}",
+      },
     ],
 
     designConsiderations: [
@@ -313,7 +323,7 @@ export const modules = [
       "/gerbers/side-ind/SIDE_DIR_IND_PCB.GM1",
     ],
     layoutPath: "/images/sideind.png",
-    schematicPath: null,
+    schematicPath: "/schematics/SCH_SIDEIND.pdf",
     photoPath: null,
 
     comparison: {
@@ -360,6 +370,11 @@ export const modules = [
         latex:
           "P_{total} = V_{supply} \\times I_f = 13.8 \\times 0.35 = 4.83\\,\\text{W}",
       },
+      {
+        title: "Resistor Power",
+        latex:
+          "P_R = (V_{supply} - N \\cdot V_f) \\times I_f = (13.8 - 4 \\times 2.2) \\times 0.35 = 5.0 \\times 0.35 = 1.75\\,\\text{W}",
+      },
     ],
 
     designConsiderations: [
@@ -401,7 +416,7 @@ export const modules = [
       "/gerbers/DRL/DRL_PCB.GBS",
       "/gerbers/DRL/DRL_PCB.GM1",],
     layoutPath: "/images/drl.png",
-    schematicPath: null,
+    schematicPath: "/schematics/DRL.pdf",
     photoPath: null,
 
     comparison: {
@@ -452,6 +467,11 @@ export const modules = [
         title: "Total Power Dissipation",
         latex:
           "P_{total} = 6 \\times V_{supply} \\times I_f = 6 \\times 13.8 \\times 0.24 = 19.87\\,\\text{W}",
+      },
+      {
+        title: "Resistor Power (per resistor)",
+        latex:
+          "P_R = (V_{supply} - 2 \\times V_f) \\times I_f = (13.8 - 2 \\times 6.14) \\times 0.24 = 1.52 \\times 0.24 = 0.365\\,\\text{W}",
       },
     ],
 
